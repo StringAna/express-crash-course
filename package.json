@@ -4,7 +4,9 @@
   "description": "Trying to follow simple hands on examples to get to know express a little bit better.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev":"nodemon index"
   },
   "repository": {
     "type": "git",
