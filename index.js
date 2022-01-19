@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-const app = express();
 const members = require('./Members');
+const logger = require('./middleware/logger');
 
-// app.get('/', (req, res) => {
-//   res.send('<h1>Hello from express</h1>');
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
+const app = express();
+
+//to initialize the middleware
+app.use(logger);
 
 //gets all members
 app.get('/api/members', (req, res) => {
