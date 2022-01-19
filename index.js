@@ -2,10 +2,13 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.get('/', (req, res) => {
-  //   res.send('<h1>Hello from express</h1>');
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// app.get('/', (req, res) => {
+//   res.send('<h1>Hello from express</h1>');
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
+
+//set static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 //to run the web server on a port
 const PORT = process.env.PORT || 5000;
