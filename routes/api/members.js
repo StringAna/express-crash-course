@@ -72,4 +72,22 @@ router.put('/:id', (req, res) => {
   }
 });
 
+//Delete member
+router.delete('/:id', (req, res) => {
+  //to deal with members that don't exist
+  const found = members.some((mem) => mem.id === parseInt(req.params.id));
+
+  // === : data type has to match on both sides
+  // parseInt to convert id to int
+  if (found) {
+    res.json({
+      msg: 'Member deleted',
+      members: members.filter((mem) => mem.id !== parseInt(req.params.id)),
+    });
+  } else {
+    //http-status 400 : bad req
+    res.status(400).json({ msg: `No member with the id of ${req.params.id}` });
+  }
+});
+
 module.exports = router;
