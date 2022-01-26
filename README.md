@@ -31,8 +31,8 @@ Trying to follow simple hands on examples to get to know express a little bit be
   - To use it :-
   - § Go to package.json
   - § Create 2 scripts:-
-    - □ 'start':'node index' - keep resetting the server every time you make a change
-    - □ 'dev':'nodemon index' - constantly watches server
+    - 'start':'node index' - keep resetting the server every time you make a change
+    - 'dev':'nodemon index' - constantly watches server
 - Create a Route
   - App.get('route',function);
   - Every route we create has access tp req and res object
